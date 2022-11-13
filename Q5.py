@@ -1,3 +1,4 @@
+#Time Complexity O(klongN),k = length of values, N = length of arr
 class Solution:
     def insertingIndex(self, arr, values):
         def helper(val,arr):
