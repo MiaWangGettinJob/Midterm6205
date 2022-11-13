@@ -1,3 +1,5 @@
+#Time Comlexity: worst case O(N)
+
 from collections import deque
 
 class TreeNode:
@@ -14,9 +16,9 @@ class Solution:
             if low <= root.val <= high:
                 result.append(root.val)
                 print(root.val)
-            if root.left:
+            if root.val >= low and root.left:
                 Range(root.left, low, high)
-            if root.right:
+            if root.val <= high and root.right:
                 Range(root.right, low, high)
 
         Range(root, low, high)
